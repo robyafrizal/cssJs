@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Javascript</title>
+    <style type="text/css">
+        html {
+            background-color: gainsboro;
+        }
+        * {
+            color: blue;
+            font-weight: bold;
+        }
+        .mycolor {
+            height: 200px;
+            width: 200px;
+            background-color: #f4f;
+            position: relative;
+            z-index: 100;
+            top: 20px;
+        }
+        .mycolor p:first-of-type{
+            color: green;
+        }
+        #myid {
+            height: 20px;
+            width: 40px;
+            background-color: #000;
+            position: relative;
+            z-index: 100;
+            left: 10px;
+            color: #eee;
+            font-weight: initial;
+            text-align: center;
+        }
+        #myid p::first-letter{
+            color: red;
+        }
+        [data-type] {
+            background-color: aqua;
+            width: 100px;
+            margin-bottom: 10px;
+            padding: 5px 20px 5px 40px;
+        }
+        [data-type = 'secondary']{
+            color: red !important;
+        }
+        .secondary{
+            color: black;
+        }
+        .satu{
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            margin: 40px;
+            padding: 20px;
+            display: inline-block;
+            position: static;
+        }
+        .kedua{
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            display: inline-block;
+            position: absolute;
+        }
+        .ketiga{
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+            padding: 20px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .wrapper p{
+            font-weight: lighter;
+        }
+        /* empty states */
+        .wrapper :empty{
+            background: gray;
+            height: 10px;
+        }
+        /* Pseudo Element */
+        a:hover{
+            background-color: black;
+            color: yellow;
+            text-decoration: none;
+        }
+        button{
+            background-color: green;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        button:focus{
+            background-color: hotpink;
+            outline: 2px dashed red;
+            outline-offset: 3px;
+            margin-left: 10px;
+            transform: scale(1.2);
+        }
+        button:active{
+            background-color: yellow;
+            outline: 2px dashed blue;
+            outline-offset: 3px;
+        }
+        p:first-child{
+            background: gold;
+            color: #000;
+        }
+        p:nth-child(4){
+            background: greenyellow;
+            color: #000;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Learn CSS Javascript</h1>
+    <div class="mycolor">
+        <p>Ini p yang pertama</p>
+        <p>Ini p yang kedua</p>
+        <hr>
+        <div id="myid">
+            <p>Hello</p>
+        </div>
+        <div data-type="primary">Primary</div>
+        <div data-type="secondary" class="secondary">Secondary</div>
+    </div>
+    <div class="satu">
+        <div class="kedua"></div>
+    </div>
+    <div class="ketiga">
+        <div class="kedua"></div>
+    </div>
+
+    <!-- Pseudo Element -->
+    <div class="wrapper">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        <p>This is a link <a href="#">Hover Me</a></p>
+        <!-- empty states -->
+        <p></p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, soluta. Accusantium quis ex hic? Maiores sunt praesentium repudiandae necessitatibus harum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button>Klik Me</button>
+    </div>
+</body>
+</html>
