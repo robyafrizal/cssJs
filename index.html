@@ -4,122 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Javascript</title>
-    <style type="text/css">
-        html {
-            background-color: gainsboro;
-        }
-        * {
-            color: blue;
-            font-weight: bold;
-        }
-        .mycolor {
-            height: 200px;
-            width: 200px;
-            background-color: #f4f;
-            position: relative;
-            z-index: 100;
-            top: 20px;
-        }
-        .mycolor p:first-of-type{
-            color: green;
-        }
-        #myid {
-            height: 20px;
-            width: 40px;
-            background-color: #000;
-            position: relative;
-            z-index: 100;
-            left: 10px;
-            color: #eee;
-            font-weight: initial;
-            text-align: center;
-        }
-        #myid p::first-letter{
-            color: red;
-        }
-        [data-type] {
-            background-color: aqua;
-            width: 100px;
-            margin-bottom: 10px;
-            padding: 5px 20px 5px 40px;
-        }
-        [data-type = 'secondary']{
-            color: red !important;
-        }
-        .secondary{
-            color: black;
-        }
-        .satu{
-            width: 40px;
-            height: 40px;
-            background-color: #000;
-            margin: 40px;
-            padding: 20px;
-            display: inline-block;
-            position: static;
-        }
-        .kedua{
-            width: 40px;
-            height: 40px;
-            background-color: red;
-            display: inline-block;
-            position: absolute;
-        }
-        .ketiga{
-            width: 40px;
-            height: 40px;
-            background-color: blue;
-            padding: 20px;
-            display: inline-block;
-            position: relative;
-        }
-
-        .wrapper p{
-            font-weight: lighter;
-        }
-        /* empty states */
-        .wrapper :empty{
-            background: gray;
-            height: 10px;
-        }
-        /* Pseudo Element */
-        a:hover{
-            background-color: black;
-            color: yellow;
-            text-decoration: none;
-        }
-        button{
-            background-color: green;
-            color: black;
-            border: none;
-            padding: 5px 10px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        button:focus{
-            background-color: hotpink;
-            outline: 2px dashed red;
-            outline-offset: 3px;
-            margin-left: 10px;
-            transform: scale(1.2);
-        }
-        button:active{
-            background-color: yellow;
-            outline: 2px dashed blue;
-            outline-offset: 3px;
-        }
-        p:first-child{
-            background: gold;
-            color: #000;
-        }
-        p:nth-child(4){
-            background: greenyellow;
-            color: #000;
-        }
-
-        
-
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <h1>Learn CSS Javascript</h1>
@@ -148,7 +33,36 @@
         <p></p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, soluta. Accusantium quis ex hic? Maiores sunt praesentium repudiandae necessitatibus harum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <button>Klik Me</button>
+
+        <!-- Pseudo Class -->
+        <form action="#">
+            <label for="email">Email Address</label>
+            <input type="email" required placeholder="Must valid email, like name@domain.com" aria-describedby="email-info">
+            <p class="info" id="emailinfo">Add a valid email address to see the state change</p>
+            <br>
+            <label for="#">
+                <input type="checkbox" name="#" id="#">
+                Check Me
+            </label>
+        </form>
     </div>
+    <div class="box">
+        <p>Box sizing eith percentage</p>
+        <ul>
+            <li><a href="#">Ini contoh 1</a></li>
+            <li><a href="#">Ini contoh 2</a></li>
+            <li><a href="#">Ini contoh 3</a></li>
+            <li><button disabled>Disable Button</button></li>
+            <li><button>Enable Button</button></li>
+        </ul>
+    </div>
+
+    <p id="intro">Belajar DOM HTML</p>
+    <p id="demo"></p>
+    <p class="intro1">Terus semangat jangan pantang menyerah</p>
+    <p class="demo1">Sip</p>
+    <p class="demo1">Oke</p>
+
+    <script src="./script.js"></script>
 </body>
 </html>

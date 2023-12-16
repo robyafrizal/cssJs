@@ -1,0 +1,185 @@
+html {
+    background-color: gainsboro;
+}
+* {
+    color: darkslategrey;
+    font-weight: bold;
+}
+.mycolor {
+    height: 200px;
+    width: 200px;
+    background-color: #f4f;
+    position: relative;
+    z-index: 100;
+    top: 20px;
+}
+.mycolor p:first-of-type{
+    color: green;
+}
+#myid {
+    height: 20px;
+    width: 40px;
+    background-color: #000;
+    position: relative;
+    z-index: 100;
+    left: 10px;
+    color: #eee;
+    font-weight: initial;
+    text-align: center;
+}
+#myid p::first-letter{
+    color: red;
+}
+[data-type] {
+    background-color: aqua;
+    width: 100px;
+    margin-bottom: 10px;
+    padding: 5px 20px 5px 40px;
+}
+[data-type = 'secondary']{
+    color: red !important;
+}
+.secondary{
+    color: black;
+}
+.satu{
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    margin: 40px;
+    padding: 20px;
+    display: inline-block;
+    position: static;
+}
+.kedua{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+}
+.ketiga{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.wrapper p{
+    font-weight: lighter;
+}
+/* empty states */
+.wrapper :empty{
+    background: gray;
+    height: 10px;
+}
+
+/* Pseudo Class */
+:checked{
+    box-shadow: 0px 0px 5px 3px greenyellow;
+}
+input{
+    background-color: #f4f;
+}
+input:invalid{
+    border-color: red;
+}
+input:valid{
+    border-color: goldenrod;
+}
+
+/* Pseudo Element */
+a:hover{
+    background-color: black;
+    color: yellow;
+    text-decoration: none;
+}
+button{
+    background-color: green;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:focus{
+    background-color: hotpink;
+    outline: 2px dashed red;
+    outline-offset: 3px;
+    margin-left: 10px;
+    transform: scale(1.2);
+}
+button:hover{
+    background-color: yellow;
+    outline: 2px dashed blue;
+    outline-offset: 3px;
+}
+button:enabled{
+    border: 4px solid red;
+}
+button:disabled{
+    background: gray;
+    border-top: grey;
+    cursor: not-allowed;
+}
+button:disabled:hover{
+    color: #eee;
+    box-shadow: none;
+}
+
+p:first-child{
+    background: gold;
+    color: #000;
+}
+p:nth-child(4){
+    background: greenyellow;
+    color: #000;
+}
+
+.box{
+    width: 300px;
+    height: 190px;
+    background-color: antiquewhite;
+    box-sizing: content-box;
+    margin: 10px;
+}
+.box p{
+    width: 50%;
+    background: #f4f;
+    border: 1px solid var(--color-stroke);
+    padding: 0.25rem;
+}
+.box ul li{
+    margin: 5px;
+}
+a:link{
+    color: gray;
+}
+a:visited{
+    color: #f4f;
+}
+a:hover{
+    color: red;
+}
+a:active{
+    color: blue;
+}
+
+
+/* .awesome{
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1;
+    border: 5px solid;
+    padding: 2rem;
+    width: 320px;
+}
+.awesome[data-sizing='intrinsic']{
+    width: min-content;
+}
+.awesome{
+    --flow-space: 2rem;
+} */
