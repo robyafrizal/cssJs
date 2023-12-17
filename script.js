@@ -267,6 +267,10 @@ function showJob(age) {
 }
 showJob(age)
 
+
+
+
+
 console.log('---------------------DOM HTML------------')
 
 // let url = window.document.URL
@@ -287,3 +291,70 @@ document.getElementsByTagName('p')[3].innerHTML = 'Masuk menggunakan DOM Tag Nam
 
 const ele2 = document.querySelectorAll('div.wrapper > p')
 document.querySelectorAll('div.wrapper > p')[3].innerHTML = 'Masuk menggunakan DOM Query Selector All - ' + ele2[4].innerHTML
+
+console.log('-------------')
+
+document.body.onload = addElement
+// addElement(); Sama fungsinya dengan pemanggilan fungsi seperti diatas
+function addElement() {
+    const newDiv = document.createElement('div');
+    const content = document.createTextNode('Text ini ditambahkan dari create text node');
+    newDiv.appendChild(content);
+    // console.log(newDiv);
+
+    const currentDiv = document.getElementById('div1');
+    document.body.insertBefore(newDiv,currentDiv);
+    // document.body.insertBefore(newDiv,currentDiv.nextElementSibling) (penempatan setelah div)
+    // currentDiv.appendChild(newDiv) (rumus ini akan menambahkan nya menjadi child element)
+}
+console.log('-------------')
+
+function addList() {
+    const node = document.createElement('li');
+    const textNode = document.createTextNode('List from DOM');
+    node.appendChild(textNode);
+
+    const box = document.querySelectorAll('.box > ul')[0];
+    box.appendChild(node);
+
+    document.getElementsByClassName('box')[0].style.backgroundColor = 'white';
+    document.getElementsByClassName('box')[0].style.height = '500px';
+}
+
+function changeTitle(){
+    document.getElementsByTagName('title')[0].innerHTML = 'Sip berubah'
+}
+
+console.log('------Add Event Listener-------')
+
+//Membuat event sendiri ketika tombol di klik & bisa lgsg menggunakan 2 funsi bersamaan
+const xy = document.getElementById('event');
+xy.addEventListener('click', addEvent);
+xy.addEventListener('click', changeText);
+
+function addEvent() {
+    alert('Ini dari Add Event Listener');
+}
+function changeText() {
+    document.getElementById('events').innerHTML = 'Add Event Listener dari DOM';
+    document.getElementById('events').style.fontSize = '40px';
+}
+
+console.log('-------------')
+
+window.addEventListener('resize', windowResize);
+function windowResize() {
+    document.getElementById('resize').innerHTML = Math.random();
+}
+
+console.log('-------------')
+let p1 = 6;
+let p2 = 4;
+
+// document.getElementById('param').addEventListener('click', myParam(p1,p2)) //Hasilnya langsung muncul
+document.getElementById('param').addEventListener('click', function(){
+    myParam(p1,p2);
+})
+function myParam(a,b) {
+    document.getElementById('params').innerHTML = a * b
+}
