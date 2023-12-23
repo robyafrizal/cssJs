@@ -36,9 +36,8 @@ function newUser(name, age){
 let users = newUser('Atin', 33);
 console.log(`${users.name} adalah baby sister berumur ${users.age}`)
 
-console.log('----------------------')
 
-// Comparison & Logical Operator
+console.log('------------Comparison & Logical Operator----------')
 let hour = 11;
 let isWeekend = false;
 // if (hour <= 9 || hour >=22 || isWeekend) {
